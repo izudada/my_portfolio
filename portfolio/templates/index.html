@@ -23,7 +23,7 @@
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
@@ -39,12 +39,190 @@
     </header>
 
     <main>
-        <h1> Udeagbala Anthony </h1>
+        <!--===== HOME =====-->
+        <section class="home" id="home">
+            <div class="home__container bd-grid">
+                <h1 class="home__title"><span>HE</span><br>LLO.</h1>
+
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
+                </div>
+                
+                <img src="{% static 'images/home_image1.png' %}" alt="" class="home__img">
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section" id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="{% static 'images/home_image1.png' %}" alt="">
+                </div>
+
+                <div class="div__about">
+                    <h2 class="about__subtitle">I'am Anthony Udeagbala</h2>
+                    <span class="about__profession">Software Developer</span>
+                    <p class="about__text">
+                        I am a prodigal python developer, who has failed a lot trying to learn how to code. I have built successful web products after my success learning python for the second time. <br> <br>
+
+                        I have built a point of sales web application, which helps shop owners digitally manage their inventory, sales, report generation, low stock alert, employee account and more using flask, MySQL and Bootstrap. I am currently building an exam management system using Django and DjangoRestFramework. <br> <br>
+
+                        Do you have an idea for your business challenges? I am open to listen to them and help you build your ideas to life.  <br> <br>
+
+                        You are welcomed to connect or send a message.
+                    </p>
+
+                    <div class="about__social">
+                        <a href="https://www.linkedin.com/in/izudada" class="about__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/izudada" class="about__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
+                        <a href="https://twitter.com/_izudada" class="about__social-icon" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                        <a href="https://izudada.hashnode.dev/" class="about__social-icon" target="_blank"><i class='bx bxl-blogger' ></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills__container bd-grid">
+                <div class="skills__box">
+                    <h3 class="skills__subtitle">Development</h3>
+                    <span class="skills__name">Html</span>
+                    <span class="skills__name">Css</span>
+                    <!-- <span class="skills__name">Javascript</span> -->
+                    <span class="skills__name">Python</span>
+                    <span class="skills__name">SQL</span>
+                    <span class="skills__name">SQLAlchemy</span>
+                    <span class="skills__name">Bootstrap</span>
+                    <span class="skills__name">Flask</span>
+                    <span class="skills__name">Django</span>
+                    <span class="skills__name">CI/CD</span>
+                    
+                    <h3 class="skills__subtitle">Design</h3>
+                    <span class="skills__name">Corel Draw</span>
+                    <span class="skills__name">Photoshop</span>
+
+                    <h3 class="skills__subtitle">Cloud</h3>
+                    <span class="skills__name">AWS S3</span>
+
+                    <h3 class="skills__subtitle">Version Control</h3>
+                    <span class="skills__name">Git</span>
+                </div>
+
+                <div class="skills__img">
+                    <img src="{% static 'images/skill.jpg' %}" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!--===== PORTFOLIO =====-->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section-title">Portfolio</h2>
+
+            <div class="portfolio__container bd-grid">
+                <div class="portfolio__img">
+                    <img src="{% static 'images/work1.jpg' %}" alt="">
+                    <h3>Myshop45</h3>
+                    <p>A point of sales apllication that helps shop owners monitor and ensure smooth running of your business from anywhere, while keeping it secure and efficient.</p>
+
+                    <div class="about__social">
+                        <a href="https://myshop45.com/" class="about__social-icon" target="_blank"><i class='bx bx-world' ></i></a>
+                    </div>
+                </div>
+                <div class="portfolio__img">
+                    <img src="{% static 'images/work2.jpg' %}" alt="">
+
+                    <h3>Mind 2 Paper</h3>
+                    <p>A note app for putting down your thoughts in a safe, reliable and friendly space. Care to share your thoughts with your future self? </p>
+
+                    <div class="about__social">
+                        <a href="https://github.com/izudada/note_app" class="about__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
+                        <a href="https://izudada-note-app.herokuapp.com/" class="about__social-icon" target="_blank"><i class='bx bx-world' ></i></a>
+                    </div>
+                </div>
+                <div class="portfolio__img">
+                    <img src="{% static 'images/work3.jpg' %}" alt="">
+
+                    <h3>Matrix Blog</h3>
+                    <p>A capstone project for matrix intersnhip</p>
+
+                    <div class="about__social">
+                        <a href="https://github.com/izudada/matrix_blog" class="about__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
+                        <a href="https://matrix-blog.herokuapp.com/" class="about__social-icon" target="_blank"><i class='bx bx-world' ></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio__img">
+                    <img src="{% static 'images/work4.jpg' %}" alt="">
+
+                    <h3>Matrix Blog</h3>
+                    <p>A project task for zuri intersnhip</p>
+
+                    <div class="about__social">
+                        <a href="https://github.com/izudada/zuri_blog" class="about__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
+                        <a href="http://izudada-blog.herokuapp.com/" class="about__social-icon" target="_blank"><i class='bx bx-world' ></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact__container bd-grid">
+                <form action="" class="contact__form">
+                    <div class="contact__inputs">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="email" placeholder="Email" class="contact__input">
+                    </div>
+
+                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+
+                    <input type="submit" value="Send" class="contact__button">
+                </form>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
+    <!--===== FOOTER =====-->
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__data">
+                <h2 class="footer__title">Anthony Udeagbala</h2>
+                <p class="footer__text"> I am a prodigal python developer, who has failed a lot trying to learn how to code.</p>
+            </div>
 
+            <div class="footer__data">
+                <h2 class="footer__title">EXPLORE</h2>
+                <ul>
+                    <li><a href="#home" class="footer__link">Home</a></li>
+                    <li><a href="#about" class="footer__link">About</a></li>
+                    <li><a href="#skills" class="footer__link">Skills</a></li>
+                    <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                    <li><a href="#Contact" class="footer__link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__data">
+                <h2 class="footer__title">FOLLOW</h2>
+                <div class="about__social">
+                    <a href="https://www.linkedin.com/in/izudada" class="about__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/izudada" class="about__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
+                    <a href="https://twitter.com/_izudada" class="about__social-icon" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://izudada.hashnode.dev/" class="about__social-icon" target="_blank"><i class='bx bxl-blogger' ></i></a>
+                </div>
+            </div>
+
+
+        </div>
     </footer>
+
 
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
