@@ -334,7 +334,10 @@ img{
 .internships data img{ 
     width: 15%;
 }
-
+.internships .data{
+    text-align: center;
+    padding: 40px;
+}
 /* ===== CONTACT =====*/
 .contact__container{
     row-gap: 2rem;
