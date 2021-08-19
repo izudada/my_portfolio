@@ -135,7 +135,7 @@ img{
         width: 80%;
         height: 100%;
         padding: 2rem;
-        background-color: rgba(255,255,255,.3);
+        background-color: rgba(255,255,255,.8);
         transition: .5s;
         backdrop-filter: blur(10px);
     }
@@ -315,9 +315,32 @@ img{
     color: var(--dark-color);
 }
 
+/* INTERNSHIPS */
+
+#intersnhips{
+    display: flex;
+    flex-direction: column;
+    align-content: center;   
+    justify-content: center;
+}
+.internships{
+    display: flex;
+    justify-content: center; 
+    align-self: center; 
+}
+.internships data{
+    padding: 5px;
+}
+.internships data img{ 
+    width: 15%;
+}
+
 /* ===== CONTACT =====*/
 .contact__container{
     row-gap: 2rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 .contact__subtitle{
     font-size: var(--normal-font-size);
@@ -336,7 +359,7 @@ img{
     width: 100%;
     padding: .8rem;
     outline: none;
-    border: 1.5px solid var(--dark-color);
+    border: 1.5px solid var(--first-color);
     font-size: var(--normal-font-size);
     margin-bottom: var(--mb-4);
     border-radius: .5rem;

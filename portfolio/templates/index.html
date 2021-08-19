@@ -28,7 +28,7 @@
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-                    <li class="nav__item"><a href="https://izudada.hashnode.dev/" class="nav__link" target="_blank">Blog</a></li>
+                    <li class="nav__item"><a href="#internships" class="nav__link">Internships</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
@@ -173,27 +173,38 @@
             </div>
         </section>
 
+        <section section="section" id="internships">
+            <h2 class="section-title">Internships</h2>
+            <div class="internships">
+                <div class="data">
+                    <h4>Zuri</h4>
+                    <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1629348471/my_portfolio/internships/download_pywcbg.png" alt="Zuri Logo">
+                </div>
+                <div class="data">
+                    <h4>HNG</h4>
+                    <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1629357168/my_portfolio/internships/1565099198766_ybvyl3.png" alt="HNG Logo">
+                </div>
+                <div class="data">
+                    <h4>Ustacky</h4>
+                    <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1629348471/my_portfolio/internships/1573923828493_cmsfun.png" alt="Ustacky Logo">
+                </div>
+            </div>
+        </section>
+
         <!--===== CONTACT =====-->
         <section class="contact section" id="contact">
-            {% for message in messages %}
-                <div class="alert {{ message.tags }} alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    {{ message | safe }}
-                </div>
-            {% endfor %}
+
             <h2 class="section-title">Contact</h2>
 
             <div class="contact__container bd-grid">
-                <form action="{% url 'contact_me' %}" class="contact__form" method="post">
+                <form action="" class="contact__form" method="post">
                     {% csrf_token %}
                     <div class="contact__inputs">
-                        <input type="text" name="name" placeholder="Name" class="contact__input">
-                        <input type="email" name="email" placeholder="Email" class="contact__input">
+                        {{ form.name }}
+                        {{ form.email }}
                     </div>
-
-                    <textarea name="message" id="" cols="0" rows="10" class="contact__input"></textarea>
+                    {{ form.subject }}
+                    {{ form.body }}
 
                     <input type="submit" value="Send" class="contact__button">
                 </form>

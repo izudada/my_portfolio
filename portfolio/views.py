@@ -6,19 +6,22 @@ from django.contrib import messages
 
 from django.views.generic import TemplateView, FormView
 
-
-class IndexView(TemplateView):
-    template_name = 'index.html'
+from .forms import ContactForm
 
 
-def contact_me(request):
-    if request.method == 'POST':
-        recepient = request.POST['email']
-        name = request.POST['name']
-        body = request.POST['message']
-        subject = 'Portfolio Contact'
-        message = f'{name} => {body}'
+class IndexView(FormView):
+    form_class = ContactForm
+     
+    template_name = "index.html"
+ 
+    success_url ="index"
+
+    def form_valid(self, form):
+        name=form.cleaned_data.get('name')
+        email=form.cleaned_data.get('email')
+        body = form.cleaned_data.get('body')
+        subject = form.cleaned_data.get('subject')
+        message = f' {name} => {body}'
         send_mail(subject, 
-            message,recepient , [settings.EMAIL_HOST_USER], fail_silently = False)
-        messages.info(request, "Info: Thanks, I have gladly received your mail and enroute to read with anticipation.")
-        return redirect('index')
+            message,email , [settings.EMAIL_HOST_USER], fail_silently = False)
+        return redirect('index') 
