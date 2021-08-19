@@ -60,7 +60,7 @@
 
             <div class="about__container bd-grid">
                 <div class="about__img">
-                    <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1629344393/my_portfolio/home_image1_as0h8i.png" alt="">
+                    <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1629344393/my_portfolio/home_image1_as0h8i.png" class="about__img" alt="">
                 </div>
 
                 <div class="div__about">
@@ -130,7 +130,7 @@
                 <div class="portfolio__img">
                     <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1629344388/my_portfolio/work1_xeavwf.jpg" alt="">
                     <h3>Myshop45</h3>
-                    <p>A point of sales apllication that helps shop owners monitor and ensure smooth running of your business from anywhere, while keeping it secure and efficient.</p>
+                    <p>A point of sales apllication that helps shop owners monitor and ensure smooth running of their business from anywhere, while keeping it secure and efficient.</p>
 
                     <div class="about__social">
                         <a href="https://myshop45.com/" class="about__social-icon" target="_blank"><i class='bx bx-world' ></i></a>
@@ -201,8 +201,15 @@
         <section class="contact section" id="contact">
 
             <h2 class="section-title">Contact</h2>
+            
+            <div class="div__success">
+                {% for info in messages %}
+                    <p class="success__message">{{ info }}</p>
+                {% endfor %}
+            </div>
 
             <div class="contact__container bd-grid">
+                
                 <form action="" class="contact__form" method="post">
                     {% csrf_token %}
                     <div class="contact__inputs">
