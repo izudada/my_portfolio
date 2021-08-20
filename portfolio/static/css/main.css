@@ -136,7 +136,7 @@ img{
         width: 80%;
         height: 100%;
         padding: 2rem;
-        background-color: rgba(204,208,255,.9);
+        background-color: rgba(204,208,255,.7);
         transition: .5s;
         backdrop-filter: blur(10px);
     }
@@ -237,6 +237,10 @@ img{
 }
 .about__text{
     margin-bottom: var(--mb-4);
+    text-align: left;
+}
+.about__text ul{
+    text-align: left;
 }
 .about__profession{
     display: block;
