@@ -99,6 +99,7 @@ img{
     margin: auto;
     top: 2rem;
     background-color: var(--first-color);
+
 }
 
 /*===== LAYOUT =====*/
@@ -107,7 +108,7 @@ img{
     display: grid;
     grid-template-columns: 100%;
     grid-column-gap: 2rem;
-    width: calc(100% - 8rem);
+    width: calc(100% - 2rem);
     margin-left: var(--mb-2);
     margin-right: var(--mb-2);
 }
@@ -135,12 +136,9 @@ img{
         width: 80%;
         height: 100%;
         padding: 2rem;
-        background-color: rgba(255,255,255,.8);
+        background-color: rgba(204,208,255,.9);
         transition: .5s;
         backdrop-filter: blur(10px);
-    }
-    .section{
-        padding: 20px;
     }
 }
 .nav__item{
@@ -223,14 +221,14 @@ img{
     display: flex;
     justify-content: center;
     padding-top: 1rem;
-    width: 400px;
-    height: 400px;
+    width: 120px;
+    height: 120px;
     background-color: var(--first-color);
     border-radius: 50%;
     overflow: hidden;
 }
 .about__img img{
-    width: 400px;
+    width: 100px;
 }
 .about__subtitle{
     font-size: var(--h2-font-size);
@@ -239,7 +237,6 @@ img{
 }
 .about__text{
     margin-bottom: var(--mb-4);
-    text-align: justify;
 }
 .about__profession{
     display: block;
@@ -284,12 +281,11 @@ img{
 }
 .portfolio__container{
     justify-items: center;
-    row-gap: 1rem;
+    row-gap: 2rem;
 }
 .portfolio__img{
     position: relative;
     overflow: hidden;
-    width: 90%;
 }
 .portfolio__img img{
     border-radius: .5rem;
@@ -302,7 +298,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255,255,255,.8);
+    background-color: rgba(255,255,255,.3);
     border-radius: .5rem;
     cursor: pointer;
     backdrop-filter: blur(10px);
@@ -315,53 +311,14 @@ img{
     color: var(--dark-color);
 }
 
-/* INTERNSHIPS */
-
-#intersnhips{
-    display: flex;
-    flex-direction: column;
-    align-content: center;   
-    justify-content: center;
-}
-.internships{
-    display: flex;
-    justify-content: center; 
-    align-self: center; 
-}
-.internships data{
-    padding: 5px;
-}
-.internships data img{ 
-    width: 15%;
-}
-.internships .data{
-    text-align: center;
-    padding: 40px;
-}
 /* ===== CONTACT =====*/
 .contact__container{
     row-gap: 2rem;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-}
-.div__success{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.success__message{
-    width: 50%;
-    text-align: center;
-    border-radius: 10px;
-    background-color: green;
-    color: white;
-    padding: 15px;
-    margin-bottom: 30px;
 }
 .contact__subtitle{
     font-size: var(--normal-font-size);
     color: var(--first-color);
+    font-size: 30pt;
 }
 .contact__text{
     display: inline-block;
@@ -426,10 +383,6 @@ img{
   .home__img {
     width: 230px;
   }
-  .about__img{
-      width: 150px;
-      height: 150px;
-  }
 }
 
 @media screen and (min-width: 768px){
@@ -474,11 +427,10 @@ img{
         height: 100vh;
         grid-template-rows: 1.7fr 1fr;
         row-gap: 0;
-        padding: 5px;
     }
     .home__img{
         width: 524px;
-        right: 5%;
+        right: 10%;
     }
 
     .about__container{
@@ -488,11 +440,11 @@ img{
         padding: 4rem 0;
     }
     .about__img{
-        width: 400px;
-        height: 400px;
+        width: 200px;
+        height: 200px;
     }
     .about__img img{
-        width: 365px;
+        width: 165px;
     }
 
     .skills__container{
@@ -525,11 +477,6 @@ img{
         margin-left: auto;
         margin-right: auto;
     }
-
-    .home__img {
-        width: 500px;
-        top: 60px;
-    }
 }
 
 /* For tall screens on mobiles y desktop*/
@@ -539,12 +486,6 @@ img{
     }
     .home__img {
         width: 500px;
-        right: 10%;
-    }
-    .div__about{
-        width: 80%;
-    }
-    .about__img{
-        width: 60%;
+        right: 24%;
     }
 }

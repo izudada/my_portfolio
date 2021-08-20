@@ -28,8 +28,9 @@
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-                    <li class="nav__item"><a href="#internships" class="nav__link">Internships</a></li>
+                    <li class="nav__item"><a href="https://res.cloudinary.com/dro7pyxba/image/upload/v1629435041/my_portfolio/Udeagbala_Anthony_Resume_hm7utj.pdf" class="nav__link" download="Udeagbala_Anthony_Resume" target="_blank"> Resume</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="https://izudada.hashnode.dev/" class="nav__link" target="_blank">Blog</a></li>
                 </ul>
             </div>
 
@@ -64,16 +65,23 @@
                 </div>
 
                 <div class="div__about">
-                    <h2 class="about__subtitle">I 'am Anthony Udeagbala</h2>
-                    <span class="about__profession">Software Developer</span>
+                    <h2 class="about__subtitle">I am Anthony Udeagbala</h2>
+                    <span class="about__profession">Web Developer</span>
                     <p class="about__text">
-                        I am a prodigal python developer, who has failed a lot trying to learn how to code. I have built successful web products after my success learning python for the second time. <br> <br>
+                        A prodigal Backend developer, who has failed a lot trying to learn how to code. I have built successful web products after my success learning python for the second time. <br> <br>
 
-                        I have built a point of sales web application, which helps shop owners digitally manage their inventory, sales, report generation, low stock alert, employee account and more using flask, MySQL and Bootstrap. I am currently building an exam management system using Django and DjangoRestFramework. <br> <br>
+                        I have experience in building web products using HTML, CSS, Flask and Django frameworks. I have built products like:
+                        <ull>
+                            <dt>A point of sales web application</dt>
+                            <dd> Which helps shop owners digitally manage their inventory, sales, report generation, low stock alert, employee account and more using flask, MySQL and Bootstrap.</dd>
+                            <dt>A CBT App</dt>
+                            <dd>Enabling students receive their academic tests remotely</dd>
+                        </ul>
+                        <br> <br>
 
                         Do you have an idea for your business challenges? I am open to listen to them and help you build your ideas to life.  <br> <br>
 
-                        You are welcomed to connect or send a message.
+                        You are welcomed to <a href="#contact"> <b> <i> connect </i> </b></a> or send a message.
                     </p>
 
                     <div class="about__social">
@@ -150,7 +158,7 @@
                 <div class="portfolio__img">
                     <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1629344391/my_portfolio/work3_ikpavn.jpg" alt="">
 
-                    <h3>Matrix Blog</h3>
+                    <h3>Blog</h3>
                     <p>A capstone project for matrix intersnhip</p>
 
                     <div class="about__social">
@@ -173,42 +181,35 @@
             </div>
         </section>
 
-        <section section="section" id="internships">
-            <h2 class="section-title">Internships</h2>
-            <div class="internships">
-                <div class="data">
-                    <h4>Zuri</h4>
-                    <a href="https://zuri.team/" target="_blank">
-                        <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1629348471/my_portfolio/internships/download_pywcbg.png" alt="Zuri Logo">
-                    </a>
-                </div>
-                <div class="data">
-                    <h4>HNG</h4>
-                    <a href="https://internship.zuri.team/" target="_blank">
-                        <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1629357168/my_portfolio/internships/1565099198766_ybvyl3.png" alt="HNG Logo">
-                    </a>
-                </div>
-                <div class="data">
-                    <h4>Ustacky</h4>
-                    <a href="https://ustacky.com/" target="_blank">
-                        <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1629348471/my_portfolio/internships/1573923828493_cmsfun.png" alt="Ustacky Logo">
-                    </a>
-                </div>
-            </div>
-        </section>
 
         <!--===== CONTACT =====-->
         <section class="contact section" id="contact">
 
             <h2 class="section-title">Contact</h2>
-            
             <div class="div__success">
                 {% for info in messages %}
                     <p class="success__message">{{ info }}</p>
                 {% endfor %}
             </div>
-
+            
             <div class="contact__container bd-grid">
+                
+                <div class="contact__info">
+                    <div>
+                        <a class="contact__subtitle" href="mailto:tonyudeagbala@gmail.com" target="_blank"><i class='bx bx-mail-send contact__subtitle' ></i></a>
+                    </div>
+                    <span class="contact__text"> tonyudeagbala@gmail.com </span>
+
+                    <div>
+                        <a class="contact__subtitle" href="https://api.whatsapp.com/send?phone=8160754862"><i class='bx bxl-whatsapp contact__subtitle' target="_blank" ></i></a>
+                    </div>
+                    <span class="contact__text"> +2348160754862 </span>
+
+                    <div>
+                        <i class='bx bx-current-location contact__subtitle' target="_blank" ></i>
+                    </div>
+                    <span class="contact__text">Nigeria</span>
+                </div>
                 
                 <form action="" class="contact__form" method="post">
                     {% csrf_token %}
@@ -247,16 +248,23 @@
             
             <div class="footer__data">
                 <h2 class="footer__title">FOLLOW</h2>
-                <div class="about__social">
-                    <a href="https://www.linkedin.com/in/izudada" class="about__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/izudada" class="about__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
-                    <a href="https://twitter.com/_izudada" class="about__social-icon" target="_blank"><i class='bx bxl-twitter' ></i></a>
-                    <a href="https://izudada.hashnode.dev/" class="about__social-icon" target="_blank"><i class='bx bxl-blogger' ></i></a>
-                </div>
+
+                    <a href="https://www.linkedin.com/in/izudada" class="footer__social" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/izudada" class="footer__social" target="_blank"><i class='bx bxl-github' ></i></a>
+                    <a href="https://twitter.com/_izudada" class="footer__social" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://izudada.hashnode.dev/" class="footer__social" target="_blank"><i class='bx bxl-blogger' ></i></a>
+
+                    <a href="https://zuri.team/">
+                        <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1629348471/my_portfolio/internships/download_pywcbg.png" alt="Zuri Logo">
+                    </a>
+            
             </div>
 
-
+            <p class="copyright">
+                Copyright &copy; 2021 </a>
+            </p>
         </div>
+
     </footer>
 
 
