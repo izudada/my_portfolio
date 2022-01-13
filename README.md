@@ -1,17 +1,10 @@
-# A Completed HNG Internship Stage 2 Task 
+# My Portfolio  
 
 Deployed to:
 
 -    Heroku live project. Link at [here](https://izudada.herokuapp.com/)
 
-## Task 1
-
-To run Task 1 (Which is to print my name):
-```sh
-$ python print_name.py
-```
-
-## Setup For My Portfolio (Task 2)
+## Setup For My Portfolio
 
 The first thing to do is to clone the repository:
 
