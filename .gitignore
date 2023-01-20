@@ -1,8 +1,6 @@
 env/
 
-portfolio/__pycache__/
-
-config/__pycache__/
+*__pycache__*
 
 config/.env
 
