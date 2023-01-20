@@ -1,4 +1,4 @@
-name: CBT APP CI/CD Workflow
+name: Portfolio CI/CD Workflow
 
 on : push
 
