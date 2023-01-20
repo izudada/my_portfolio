@@ -5,3 +5,5 @@ portfolio/__pycache__/
 config/__pycache__/
 
 config/.env
+
+db.sqlite3
