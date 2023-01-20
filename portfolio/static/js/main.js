@@ -13,6 +13,10 @@ showMenu('nav-toggle','nav-menu')
 
 /*===== REMOVE MENU MOBILE =====*/
 const navLink = document.querySelectorAll('.nav__link')
+const year_tag = document.getElementById('year')
+const d = new Date();
+let year = d.getFullYear();
+year_tag.innerHTML = year
 
 function linkAction(){
     const navMenu = document.getElementById('nav-menu')
