@@ -375,8 +375,13 @@ img{
 
 /* ===== FOOTER=====*/
 .footer{
-    background-color: var(--dark-color);
+    background-color: var(--dark-yellow);
 }
+.footer, .footer__container,
+.footer__social, .footer__data ul li a{
+    color: var(--dark-color);
+}
+
 .footer__container{
     row-gap: 2rem;
 }
