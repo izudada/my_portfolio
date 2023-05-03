@@ -9,10 +9,12 @@
 
 /*===== Colores =====*/
 :root{
-    --first-color: #5361FF;
+    --first-color: #5a60ea;
     --white-color: #FAFAFF;
     --dark-color: #2A3B47;
     --text-color: #697477;
+    --dark-yellow: #ffa02a;
+    --light-blue: #2affa0;
 }
 
 /*===== Fuente y tipografia =====*/
@@ -155,8 +157,14 @@ img{
     color: var(--first-color);
 }
 .nav__logo{
-    color: var(--white-color);
+    color: var(--dark-yellow);
+    background-color: var(--white-color);
+    font-weight: bold;
+    font-size: 18pt;
+    padding: 6px 10px;
+    border-radius: 13px 0 13px 0;
 }
+
 .nav__toggle{
     color: var(--white-color);
     font-size: 1.5rem;
