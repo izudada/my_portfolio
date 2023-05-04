@@ -344,6 +344,15 @@ img{
 .portfolio__link-name{
     color: var(--dark-color);
 }
+.view__more{
+    color: var(--white-color);
+    background-color: var(--dark-yellow);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 40px 0 0 160px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
 /* ===== CONTACT =====*/
 .contact__container{
