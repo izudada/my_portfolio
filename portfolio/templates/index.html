@@ -1,346 +1,266 @@
-{% load static %}
-{% load cloudinary %} 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "base.html" %}
 
-    <!-- ===== CSS ===== -->
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% block body %}
 
-    <!-- ===== BOX ICONS ===== -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!--===== HOME =====-->
+    <section class="home" id="home">
+        <div class="home__container bd-grid">
+            <h1 class="home__title"><span>HE</span><br>LLO.</h1>
 
-    <title> Anthony Udeagbala </title>
-</head>
-<body>
-    <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="" class="nav__logo">Izudada</a>
+            <div class="home__scroll">
+                <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
+            </div>
+            
+            <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1674212920/my_portfolio/DSC_2263_se97xu.jpg" alt="home image" class="home__img" alt="Header image">
+
+        </div>
+    </section>
+
+    <!--===== ABOUT =====-->
+    <section class="about section" id="about">
+        <h2 class="section-title">About</h2>
+
+        <div class="about__container bd-grid">
+            <div class="about__img">
+                <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1674212924/my_portfolio/DSC_2262_mlqj0q.jpg" class="about__img" alt="My about image">
             </div>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-                    <li class="nav__item"><a href="https://www.canva.com/design/DAFIWtmZjdI/HU9CUEhkUFmqThs2ppeFYQ/view?utm_content=DAFIWtmZjdI&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel" class="nav__link" download="Udeagbala_Anthony_Resume" target="_blank"> Resume</a></li>
-                    <li class="nav__item"><a href="https://izudada.medium.com" class="nav__link" target="_blank">Blog</a></li>
+            <div class="div__about">
+                <h2 class="about__subtitle">I am Anthony Udeagbala</h2>
+                <span class="about__profession">Backend/Python Developer</span>
+                <p class="about__text">
+                    A prodigal Backend developer, who has failed a lot trying to learn how to code. I have built successful web products after my success learning python for the second time. <br> <br>
+
+                    I am currently on a technical writing journey, to discover how much of my experience and story I can put into writing. <br> <br>
+
+                    Do you have an idea for your business challenges? I am open to listen to them and help you build your ideas to life.  <br> <br>
+
+                    You are welcomed to <a href="#contact"> <b> <i> connect </i> </b></a> or send a message.
+                </p>
+
+                <div class="about__social">
+                    <a href="https://www.linkedin.com/in/izudada" class="about__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/izudada" class="about__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
+                    <a href="https://twitter.com/_izudada" class="about__social-icon" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://izudada.medium.com" class="about__social-icon" target="_blank"><i class='bx bxl-blogger' ></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--===== EXPERIENCE =====-->
+    <section class="experience section" id="experience">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="about__container bd-grid">
+            <div class="div__about">
+                <h2 class="about__subtitle">Python Developer</h2>
+                <span class="about__profession"> <u> Emblic Technologies (2020 - Present) </u> </span>
+                <p class="about__text">
+                    My impact at Emblic Technologies involves:
+                </p>
+                <ul class="experience">
+                    <li>Developed a comprehensive point of sales (POS) application using FLASK, MYSQL, BOOTSTRAP, JAVASCRIPT, JQUERY, HTML5, CSS3, GIT, and GITHUB WORKFLOW. Features include stock management, sales, low stock alert, sales report generation, multi-user accounts, and more.</li>
+                    <li>
+                        Created an innovative exam management web application utilizing DJANGO, POSTGRESQL, JAVASCRIPT, AJAX, JQUERY BOOTSTRAP, CSS3, HTML5, GIT, and GITHUB WORKFLOW. The application enabled remote testing and grading for examiners, providing a safe option during and after a pandemic.
+                    </li>
+                    <li>
+                        Instructed students on how to build and deploy web applications using the DJANGO FRAMEWORK.
+                    </li>
+                    <li>
+                        Aided the marketing department in most marketing campaigns by scrapping websites for businesses that contained business directories for business contacts.
+                    </li>
                 </ul>
             </div>
+        </div>
+    </section>
 
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="bx bx-menu"></i>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <!--===== HOME =====-->
-        <section class="home" id="home">
-            <div class="home__container bd-grid">
-                <h1 class="home__title"><span>HE</span><br>LLO.</h1>
+    <!--===== SKILLS =====-->
+    <section class="skills section" id="skills">
+        <h2 class="section-title">Skills</h2>
 
-                <div class="home__scroll">
-                    <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
-                </div>
+        <div class="skills__container bd-grid">
+            <div class="skills__box">
+                <h3 class="skills__subtitle">Development</h3>
+                <span class="skills__name">Html</span>
+                <span class="skills__name">Css</span>
+                <span class="skills__name">Bootstrap</span>
+                <span class="skills__name">Javascript</span>
+                <span class="skills__name">JQuery</span>
+                <span class="skills__name">Ajax</span>
+                <span class="skills__name">Node Js & Express</span>
+                <span class="skills__name">Python</span>
+                <span class="skills__name">SQL</span>
+                <span class="skills__name">SQLAlchemy</span>
+                <span class="skills__name">Flask</span>
+                <span class="skills__name">Django</span>
+                <span class="skills__name">Scrappy</span>
+                <span class="skills__name">Slenium</span>
+                <span class="skills__name">CI/CD</span>
                 
-                <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1674212920/my_portfolio/DSC_2263_se97xu.jpg" alt="home image" class="home__img" alt="Header image">
+                <h3 class="skills__subtitle">Design</h3>
+                <span class="skills__name">Corel Draw</span>
+                <span class="skills__name">Photoshop</span>
 
-            </div>
-        </section>
+                <h3 class="skills__subtitle">Cloud</h3>
+                <span class="skills__name">AWS S3</span>
+                <span class="skills__name">Heroku</span>
+                <span class="skills__name">Cloudinary</span>
 
-        <!--===== ABOUT =====-->
-        <section class="about section" id="about">
-            <h2 class="section-title">About</h2>
-
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1674212924/my_portfolio/DSC_2262_mlqj0q.jpg" class="about__img" alt="My about image">
-                </div>
-
-                <div class="div__about">
-                    <h2 class="about__subtitle">I am Anthony Udeagbala</h2>
-                    <span class="about__profession">Backend/Python Developer</span>
-                    <p class="about__text">
-                        A prodigal Backend developer, who has failed a lot trying to learn how to code. I have built successful web products after my success learning python for the second time. <br> <br>
-
-                        I am currently on a technical writing journey, to discover how much of my experience and story I can put into writing. <br> <br>
-
-                        Do you have an idea for your business challenges? I am open to listen to them and help you build your ideas to life.  <br> <br>
-
-                        You are welcomed to <a href="#contact"> <b> <i> connect </i> </b></a> or send a message.
-                    </p>
-
-                    <div class="about__social">
-                        <a href="https://www.linkedin.com/in/izudada" class="about__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                        <a href="https://github.com/izudada" class="about__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
-                        <a href="https://twitter.com/_izudada" class="about__social-icon" target="_blank"><i class='bx bxl-twitter' ></i></a>
-                        <a href="https://izudada.medium.com" class="about__social-icon" target="_blank"><i class='bx bxl-blogger' ></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--===== EXPERIENCE =====-->
-        <section class="experience section" id="experience">
-            <h2 class="section-title">Experience</h2>
-
-            <div class="about__container bd-grid">
-                <div class="div__about">
-                    <h2 class="about__subtitle">Python Developer</h2>
-                    <span class="about__profession"> <u> Emblic Technologies (2020 - Present) </u> </span>
-                    <p class="about__text">
-                        My impact at Emblic Technologies involves:
-                    </p>
-                    <ul class="experience">
-                        <li>Developed a comprehensive point of sales (POS) application using FLASK, MYSQL, BOOTSTRAP, JAVASCRIPT, JQUERY, HTML5, CSS3, GIT, and GITHUB WORKFLOW. Features include stock management, sales, low stock alert, sales report generation, multi-user accounts, and more.</li>
-                        <li>
-                            Created an innovative exam management web application utilizing DJANGO, POSTGRESQL, JAVASCRIPT, AJAX, JQUERY BOOTSTRAP, CSS3, HTML5, GIT, and GITHUB WORKFLOW. The application enabled remote testing and grading for examiners, providing a safe option during and after a pandemic.
-                        </li>
-                        <li>
-                            Instructed students on how to build and deploy web applications using the DJANGO FRAMEWORK.
-                        </li>
-                        <li>
-                            Aided the marketing department in most marketing campaigns by scrapping websites for businesses that contained business directories for business contacts.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-
-        <!--===== SKILLS =====-->
-        <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
-
-            <div class="skills__container bd-grid">
-                <div class="skills__box">
-                    <h3 class="skills__subtitle">Development</h3>
-                    <span class="skills__name">Html</span>
-                    <span class="skills__name">Css</span>
-                    <span class="skills__name">Bootstrap</span>
-                    <span class="skills__name">Javascript</span>
-                    <span class="skills__name">JQuery</span>
-                    <span class="skills__name">Ajax</span>
-                    <span class="skills__name">Node Js & Express</span>
-                    <span class="skills__name">Python</span>
-                    <span class="skills__name">SQL</span>
-                    <span class="skills__name">SQLAlchemy</span>
-                    <span class="skills__name">Flask</span>
-                    <span class="skills__name">Django</span>
-                    <span class="skills__name">Scrappy</span>
-                    <span class="skills__name">Slenium</span>
-                    <span class="skills__name">CI/CD</span>
-                    
-                    <h3 class="skills__subtitle">Design</h3>
-                    <span class="skills__name">Corel Draw</span>
-                    <span class="skills__name">Photoshop</span>
-
-                    <h3 class="skills__subtitle">Cloud</h3>
-                    <span class="skills__name">AWS S3</span>
-                    <span class="skills__name">Heroku</span>
-                    <span class="skills__name">Cloudinary</span>
-
-                    <h3 class="skills__subtitle">Version Control</h3>
-                    <span class="skills__name">Git</span>
-                </div>
-
-                <div class="skills__img">
-                    <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1629344389/my_portfolio/skill_obanur.jpg" alt="">
-                </div>
-            </div>
-        </section>
-
-        <!--===== PORTFOLIO =====-->
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section-title">Portfolio</h2>
-
-            <div class="portfolio__container bd-grid">
-                <div class="portfolio__img">
-                    <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1679498414/my_portfolio/linkedinsave_zgllqf.png" alt="Image of Linkedinsave">
-                    <h3>Linkedinsave</h3>
-                    <p>
-                        A Linkedin video downloader to enable its users download videos attached to a post seemlessly.
-                    </p>
-                    <p>
-                        <small>FLASK, Ajax, JQUERY, HTML5, CSS3, GIT, GITHUB </small>
-                    </p>
-
-                    <div class="about__social">
-                        <a href="https://linkedinsave.xyz" class="about__social-icon" target="_blank"><i class='bx bx-world' ></i></a>
-                    </div>
-                </div>
-                <div class="portfolio__img">
-                    <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1674212896/my_portfolio/myshop45_thsvlo.png" alt="Image of Myshop45">
-                    <h3>Myshop45</h3>
-                    <p>
-                        A point of sales apllication that helps shop owners monitor and ensure smooth running of their business from anywhere, while keeping it secure and efficient.
-                    </p>
-                    <p>
-                        <small>FLASK, MYSQL, BOOTSTRAP,
-                            JAVASCRIPT, JQUERY, HTML5, CSS3, GIT, GITHUB
-                            WORKFLOW</small>
-                    </p>
-
-                    <div class="about__social">
-                        <a href="https://myshop45.com" class="about__social-icon" target="_blank"><i class='bx bx-world' ></i></a>
-                    </div>
-                </div>
-                <div class="portfolio__img">
-                    <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1674212896/my_portfolio/cbt_jwgo2d.png" alt="">
-
-                    <h3>CBT App</h3>
-                    <p>
-                        Build an exam management web application to enable examiners
-                        to test and grade their students without physically being present
-                        in a class, creating safety with remote functionalities during and
-                        Bootstrap after a pandemic.
-                    </p>
-                    <p>
-                        <small>DJANGO, POSTGRESQL, JAVASCRIPT, AJAX,
-                            Git JQUERY BOOTSTRAP, CSS3, HTML5, GIT, GITHUB
-                            WORKFLOW
-                        </small>
-                    </p>
-
-                    <div class="about__social">
-                        <a href="https://braintester.xyz" class="about__social-icon" target="_blank"><i class='bx bx-world' ></i></a>
-                    </div>
-                </div>
-                <div class="portfolio__img">
-                    <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1674212896/my_portfolio/pixel_art_maker_v3x3s4.png" alt="Emblic cbt app">
-
-                    <h3>Pixel Art Maker</h3>
-                    <p>
-                        Project rubric. My last capstone project for udacity's introduction to programming nanodegree.
-                        <ol>
-                            A pixel art maker that:
-                            <li>Generate a grid of rows and columns</li>
-                            <li>Apply any selected color on the cells of the generated grid</li>
-                        </ol>
-                    </p>
-                    <p>
-                        <small> CSS3, HTML5, JAVASCRIPT </small>
-                    </p>
-
-                    <div class="about__social">
-                        <a href="https://github.com/izudada/matrix_blog" class="about__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
-                        <a href="https://izudada.github.io/udacity_pixel_art_maker" class="about__social-icon" target="_blank"><i class='bx bx-world' ></i></a>
-                    </div>
-                </div>
-
-                <div class="portfolio__img">
-                    <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1674212896/my_portfolio/lannister_api_kyohwm.png" alt="Lannis API repository">
-
-                    <h3>Lannister API</h3>
-                    <p>
-                        A NodeJS API service that implements a a transaction payment splitting service (TPSS).The service is meant to calculate the amount due to one or more split payment "entities" as well as the amount left after all splits have been computed.
-                    </p>
-                    <p>
-                        <small>NODE JS, EXPRESS, GIT, GITHUB</small>
-                    </p>
-
-                    <div class="about__social">
-                        <a href="https://github.com/izudada/Lannister-Pay-API" class="about__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
-                    </div>
-                </div>
-
+                <h3 class="skills__subtitle">Version Control</h3>
+                <span class="skills__name">Git</span>
             </div>
 
-            <a href="">
-                <button class="view__more">View More</button>
-            </a>
-        </section>
-
-
-        <!--===== CONTACT =====-->
-        <section class="contact section" id="contact">
-
-            <h2 class="section-title">Contact</h2>
-            <div class="div__success">
-                {% for info in messages %}
-                    <p class="success__message">{{ info }}</p>
-                {% endfor %}
+            <div class="skills__img">
+                <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1629344389/my_portfolio/skill_obanur.jpg" alt="">
             </div>
-            
-            <div class="contact__container bd-grid">
-                
-                <div class="contact__info">
-                    <div>
-                        <a class="contact__subtitle" href="mailto:tonyudeagbala@gmail.com" target="_blank"><i class='bx bx-mail-send contact__subtitle' ></i></a>
-                    </div>
-                    <span class="contact__text"> tonyudeagbala@gmail.com </span>
+        </div>
+    </section>
 
-                    <div>
-                        <a class="contact__subtitle" href="https://api.whatsapp.com/send?phone=8160754862"><i class='bx bxl-whatsapp contact__subtitle' target="_blank" ></i></a>
-                    </div>
-                    <span class="contact__text"> +2348160754862 </span>
+    <!--===== PORTFOLIO =====-->
+    <section class="portfolio section" id="portfolio">
+        <h2 class="section-title">Portfolio</h2>
 
-                    <div>
-                        <i class='bx bx-current-location contact__subtitle' target="_blank" ></i>
-                    </div>
-                    <span class="contact__text">Nigeria</span>
-                </div>
-                
-                <form action="" class="contact__form" method="post">
-                    {% csrf_token %}
-                    <div class="contact__inputs">
-                        {{ form.name }}
-                        {{ form.email }}
-                    </div>
-                    {{ form.subject }}
-                    {{ form.body }}
-
-                    <input type="submit" value="Send" class="contact__button">
-                </form>
-            </div>
-        </section>
-
-    </main>
-
-    <!--===== FOOTER =====-->
-    <footer class="footer section">
-        <div class="footer__container bd-grid">
-
-            <div class="footer__data">
-                <div>
-                    <a href="" class="nav__logo" id="footer__logo">Izudada</a>
-                </div>
-            </div>
-
-            <div class="footer__data">
-                <h2 class="footer__title">Anthony Udeagbala</h2>
-                <p class="footer__text"> 
-                    <q>The more we create, the less we consume, the happier we become.</q>
+        <div class="portfolio__container bd-grid">
+            <div class="portfolio__img">
+                <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1679498414/my_portfolio/linkedinsave_zgllqf.png" alt="Image of Linkedinsave">
+                <h3>Linkedinsave</h3>
+                <p>
+                    A Linkedin video downloader to enable its users download videos attached to a post seemlessly.
                 </p>
-            </div>
-            
-            <div class="footer__data">
-                <h2 class="footer__title">FOLLOW</h2>
+                <p>
+                    <small>FLASK, Ajax, JQUERY, HTML5, CSS3, GIT, GITHUB </small>
+                </p>
 
-                    <a href="https://www.linkedin.com/in/izudada" class="footer__social" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/izudada" class="footer__social" target="_blank"><i class='bx bxl-github' ></i></a>
-                    <a href="https://twitter.com/_izudada" class="footer__social" target="_blank"><i class='bx bxl-twitter' ></i></a>
-                    <a href="https://izudada.medium.com/" class="footer__social" target="_blank"><i class='bx bxl-blogger' ></i></a>
-            
+                <div class="about__social">
+                    <a href="https://linkedinsave.xyz" class="about__social-icon" target="_blank"><i class='bx bx-world' ></i></a>
+                </div>
+            </div>
+            <div class="portfolio__img">
+                <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1674212896/my_portfolio/myshop45_thsvlo.png" alt="Image of Myshop45">
+                <h3>Myshop45</h3>
+                <p>
+                    A point of sales apllication that helps shop owners monitor and ensure smooth running of their business from anywhere, while keeping it secure and efficient.
+                </p>
+                <p>
+                    <small>FLASK, MYSQL, BOOTSTRAP,
+                        JAVASCRIPT, JQUERY, HTML5, CSS3, GIT, GITHUB
+                        WORKFLOW</small>
+                </p>
+
+                <div class="about__social">
+                    <a href="https://myshop45.com" class="about__social-icon" target="_blank"><i class='bx bx-world' ></i></a>
+                </div>
+            </div>
+            <div class="portfolio__img">
+                <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1674212896/my_portfolio/cbt_jwgo2d.png" alt="">
+
+                <h3>CBT App</h3>
+                <p>
+                    Build an exam management web application to enable examiners
+                    to test and grade their students without physically being present
+                    in a class, creating safety with remote functionalities during and
+                    Bootstrap after a pandemic.
+                </p>
+                <p>
+                    <small>DJANGO, POSTGRESQL, JAVASCRIPT, AJAX,
+                        Git JQUERY BOOTSTRAP, CSS3, HTML5, GIT, GITHUB
+                        WORKFLOW
+                    </small>
+                </p>
+
+                <div class="about__social">
+                    <a href="https://braintester.xyz" class="about__social-icon" target="_blank"><i class='bx bx-world' ></i></a>
+                </div>
+            </div>
+            <div class="portfolio__img">
+                <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1674212896/my_portfolio/pixel_art_maker_v3x3s4.png" alt="Emblic cbt app">
+
+                <h3>Pixel Art Maker</h3>
+                <p>
+                    Project rubric. My last capstone project for udacity's introduction to programming nanodegree.
+                    <ol>
+                        A pixel art maker that:
+                        <li>Generate a grid of rows and columns</li>
+                        <li>Apply any selected color on the cells of the generated grid</li>
+                    </ol>
+                </p>
+                <p>
+                    <small> CSS3, HTML5, JAVASCRIPT </small>
+                </p>
+
+                <div class="about__social">
+                    <a href="https://github.com/izudada/matrix_blog" class="about__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
+                    <a href="https://izudada.github.io/udacity_pixel_art_maker" class="about__social-icon" target="_blank"><i class='bx bx-world' ></i></a>
+                </div>
             </div>
 
-            <p class="copyright">
-                Copyright &copy; <span id="year"></span> </a>
-            </p>
+            <div class="portfolio__img">
+                <img src="https://res.cloudinary.com/dro7pyxba/image/upload/v1674212896/my_portfolio/lannister_api_kyohwm.png" alt="Lannis API repository">
+
+                <h3>Lannister API</h3>
+                <p>
+                    A NodeJS API service that implements a a transaction payment splitting service (TPSS).The service is meant to calculate the amount due to one or more split payment "entities" as well as the amount left after all splits have been computed.
+                </p>
+                <p>
+                    <small>NODE JS, EXPRESS, GIT, GITHUB</small>
+                </p>
+
+                <div class="about__social">
+                    <a href="https://github.com/izudada/Lannister-Pay-API" class="about__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
+                </div>
+            </div>
+
         </div>
 
-    </footer>
+        <a href="{% url 'portfolio' %}">
+            <button class="view__more">View More</button>
+        </a>
+    </section>
 
 
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--===== CONTACT =====-->
+    <section class="contact section" id="contact">
 
-    <script src="{% static 'js/main.js' %}">  </script>
-</body>
-</html>
+        <h2 class="section-title">Contact</h2>
+        <div class="div__success">
+            {% for info in messages %}
+                <p class="success__message">{{ info }}</p>
+            {% endfor %}
+        </div>
+        
+        <div class="contact__container bd-grid">
+            
+            <div class="contact__info">
+                <div>
+                    <a class="contact__subtitle" href="mailto:tonyudeagbala@gmail.com" target="_blank"><i class='bx bx-mail-send contact__subtitle' ></i></a>
+                </div>
+                <span class="contact__text"> tonyudeagbala@gmail.com </span>
+
+                <div>
+                    <a class="contact__subtitle" href="https://api.whatsapp.com/send?phone=8160754862"><i class='bx bxl-whatsapp contact__subtitle' target="_blank" ></i></a>
+                </div>
+                <span class="contact__text"> +2348160754862 </span>
+
+                <div>
+                    <i class='bx bx-current-location contact__subtitle' target="_blank" ></i>
+                </div>
+                <span class="contact__text">Nigeria</span>
+            </div>
+            
+            <form action="" class="contact__form" method="post">
+                {% csrf_token %}
+                <div class="contact__inputs">
+                    {{ form.name }}
+                    {{ form.email }}
+                </div>
+                {{ form.subject }}
+                {{ form.body }}
+
+                <input type="submit" value="Send" class="contact__button">
+            </form>
+        </div>
+    </section>
+
+{% endblock %}

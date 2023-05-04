@@ -173,3 +173,5 @@ cloudinary.config(
   api_secret = env('api_secret'),
   secure = True
 )
+
+GITHUB_API_TOKEN = env('GITHUB_API_TOKEN')

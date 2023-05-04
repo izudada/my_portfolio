@@ -5,10 +5,12 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.contrib import messages
 from django.utils.translation import gettext_lazy as _
+from django.conf import settings
 
 from django.views.generic import FormView
-
 from .forms import ContactForm
+
+import requests
 
 
 class IndexView(FormView):
@@ -32,3 +34,18 @@ class IndexView(FormView):
             level=messages.SUCCESS
         )
         return redirect('index') 
+
+
+def portfolio(request):
+    """
+        A view function that gets all github repository and essential details
+        from https://github.com/izudada profile
+
+        and return these details as 
+    """
+    headers = {"Authorization": settings.GITHUB_API_TOKEN}
+    url = "https://api.github.com/users/izudada/repos"
+    res = requests.get(url, headers=headers).json()
+    result = [{'name': info['name'],'url': info['html_url'],'description': info['description']} for info in res]
+    print(result)
+    return render(request, 'portfolio.html', {'result': result})

@@ -1,0 +1,101 @@
+{% load static %}
+{% load cloudinary %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title> Anthony Udeagbala </title>
+</head>
+<body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="{% url 'index' %}" class="nav__logo">Izudada</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="{% url 'index' %}" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                    <li class="nav__item"><a href="{% url 'portfolio' %}" class="nav__link">Repositories</a></li>
+                    <li class="nav__item"><a href="https://www.canva.com/design/DAFIWtmZjdI/HU9CUEhkUFmqThs2ppeFYQ/view?utm_content=DAFIWtmZjdI&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel" class="nav__link" download="Udeagbala_Anthony_Resume" target="_blank"> Resume</a></li>
+                    <li class="nav__item"><a href="https://izudada.medium.com" class="nav__link" target="_blank">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-menu"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block body %}
+
+        {% endblock %}
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+
+            <div class="footer__data">
+                <div>
+                    <a href="{% url 'index' %}" class="nav__logo" id="footer__logo">Izudada</a>
+                </div>
+            </div>
+
+            <div class="footer__data">
+                <h2 class="footer__title">Anthony Udeagbala</h2>
+                <p class="footer__text"> 
+                    <q>The more we create, the less we consume, the happier we become.</q>
+                </p>
+            </div>
+            
+            <div class="footer__data">
+                <h2 class="footer__title">FOLLOW</h2>
+
+                    <a href="https://www.linkedin.com/in/izudada" class="footer__social" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/izudada" class="footer__social" target="_blank"><i class='bx bxl-github' ></i></a>
+                    <a href="https://twitter.com/_izudada" class="footer__social" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://izudada.medium.com/" class="footer__social" target="_blank"><i class='bx bxl-blogger' ></i></a>
+            
+            </div>
+
+            <p class="copyright">
+                Copyright &copy; <span id="year"></span> </a>
+            </p>
+        </div>
+
+    </footer>
+
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="{% static 'js/main.js' %}">  </script>
+    <script>
+        $(document).ready(function(){
+            const links = document.querySelectorAll('.nav__link');
+            links.forEach(link => {
+                if(link.href == window.location.href){
+                    links.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>    
+</body>
+</html>

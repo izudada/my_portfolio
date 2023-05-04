@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <!--===== GITHUB PORTFOLIO =====-->
+    <div class="all__repo">
+
+        {% for data in result %}
+            <a href="{{ data.url }}">
+                <div class="repo">
+                    <h3> {{ data.name }} </h3>
+                    {% if data.description == None %}
+                        <p>This repository has no description
+                    {% else %}
+                        <p> {{ data.description }} </p>
+                    {% endif %}
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+
+    <a href="https://github.com/izudada" target="_blank">
+        <button class="view__more">View More</button>
+    </a>
+{% endblock %}
